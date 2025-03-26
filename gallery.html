@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery</title>
+    <style>
+        .buttons{
+text-align: center;
+        }
+        .xbox {
+    overflow: hidden; /* זה יוודא שהשורה תתארגן כראוי */
+}
+
+.xboximg {
+    float: left; /* ממקם את התמונה בצד שמאל */
+    margin-right: 20px; /* מרווח בין התמונה לטקסט */
+    width: 150px; /* גודל התמונה */
+    height: auto;
+}
+
+p {
+    text-align: justify; /* מיישר את הטקסט */
+}
+        .Keyboard {
+    overflow: hidden; /* זה יוודא שהשורה תתארגן כראוי */
+}
+
+.Keyboardimag {
+    float: left; /* ממקם את התמונה בצד שמאל */
+    margin-right: 20px; /* מרווח בין התמונה לטקסט */
+    width: 150px; /* גודל התמונה */
+    height: auto;
+}
+
+p {
+    text-align: justify; /* מיישר את הטקסט */
+}
+        .headph{
+    overflow: hidden; /* זה יוודא שהשורה תתארגן כראוי */
+}
+
+.headpimg {
+    float: left; /* ממקם את התמונה בצד שמאל */
+    margin-right: 20px; /* מרווח בין התמונה לטקסט */
+    width: 150px; /* גודל התמונה */
+    height: auto;
+}
+
+p {
+    text-align: justify; /* מיישר את הטקסט */
+}
+    </style>
+</head>
+<body>
+
+    <h1>Microsoft Gallery</h1>
+<hr>
+<div class="xbox">
+    <h3>Xbox series X</h3>
+    <img class="xboximg" src="https://cms-assets.xboxservices.com/assets/f0/8d/f08dfa50-f2ef-4873-bc8f-bcb6c34e48c0.png?n=642227_Hero-Gallery-0_C2_857x676.png" alt="" style="height: 100px; width: 100px;">
+    <br> 
+    <p>The Xbox Series X is a powerful gaming console with 
+        high-end graphics, <br> near-instant loading times, and support for 4K gaming,
+        designed to deliver a next-gen gaming experience.  
+    <br><br>
+   <b>Availble:30 Units.</b>
+ 
+</div>
+<hr>
+<div class="Keyboard">
+    <h3 >Microsoft Keyboard</h3>
+    <div><img class="Keyboardimag" src="https://www.gamestorm.co.il/files/products/image1_6170_2021-12-27_17-57-13.jpg" alt="" style="height: 100px; width: 200px;">
+    <br> 
+    <p>The Microsoft keyboard offers a comfortable ergonomic design with responsive <br>
+         keys and a durable build, perfect for everyday use and extended typing sessions.  
+    <br><br>
+   <b>Availble:155 Units.</b>
+ 
+</div>
+<hr>
+<div class="heafph ">
+    <h3 >Microsoft Headphones</h3>
+    <img class="headpimg" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQl2u90vhRUl-xfuF_ilAw0grQEIEhVbHBgNg&s" alt="" style="height: 100px; width: 200px;">
+    <br> 
+    <p>Microsoft headphones deliver high-quality sound, comfort, <br>
+         and advanced noise-cancellation, making them ideal for both work and entertainment.
+    <br><br>
+   <b>Availble:300 Units.</b>
+ 
+</div>
+<hr>
+<div class="buttons">
+    
+    
+    <h2>Xbox series X-<button id="count_click1">Count up <span id="count_value1">0</span></button></h2>
+    <h2>Microsoft Keyboard- <button id="count_click2">Count up <span id="count_value2">0</span></button></h2>
+    <h2>Microsoft Headphones-  <button id="count_click3">Count up <span id="count_value3">0</span></button></h2>
+
+</div>
+
+
+
+
+
+
+
+
+<script>
+function buttoncount(buttonId, valueId) {
+   let count = 0; // כל כפתור מקבל את הספירה שלו
+   return function() {
+      count++;
+      document.getElementById(valueId).innerText = count; // עדכן את אלמנט ה־span הייחודי
+   }
+}
+
+const countBtn1 = document.getElementById("count_click1");
+const countBtn2 = document.getElementById("count_click2");
+const countBtn3 = document.getElementById("count_click3");
+
+// הוסף מאזין לכל כפתור עם פונקציית ספירה עצמאית
+countBtn1.addEventListener("click", buttoncount("count_click1", "count_value1"));
+countBtn2.addEventListener("click", buttoncount("count_click2", "count_value2"));
+countBtn3.addEventListener("click", buttoncount("count_click3", "count_value3"));
+
+
+</script>
+</body>
+</html>

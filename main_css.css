@@ -1,0 +1,227 @@
+
+body{
+    background-color: white;
+}
+
+body{       
+  
+    display: grid;  
+    grid-template-columns: 20vw 60vw 20vw; 
+    grid-template-rows: 10vh 80vh 10vh;
+    grid-template-areas:
+    "header header header"
+    "navleft main rightside"
+    "footer footer footer";
+    margin: 0;
+    padding: 0;
+}
+body>*{
+border: 1px black solid ;
+text-align: center;
+
+}
+
+header{
+    
+    background-color: rgba(248, 136, 0, 0.76);
+    grid-area: header;
+}
+
+nav{
+   
+    /* background-color: rgb(0, 98, 255); */
+    grid-area: navleft;
+}
+main{
+    background-color: rgba(255, 191, 0, 0.96);
+    grid-area: main;
+}
+aside{
+    /* background-color: */
+    grid-area: rightside;
+}
+footer{
+    background-color: rgba(248, 136, 0, 0.76);
+    grid-area: footer;
+    height: 35vh;
+    color: rgb(0, 0, 0);
+    font-size: small;
+}
+
+
+.iframe {
+        width: 100%;
+        height: 100%;
+        border: 1px,black,solid; 
+      }
+
+/* ------------------------------------------------------------- */
+      .day_night,.button_Lin_Lot{
+padding: 5px 5px;
+font-size: 15px;
+cursor: pointer;
+border-radius: 30px;
+      }
+
+      .day_night:hover{
+        color: white;
+        background-color: black;
+      }
+      .button_Lin_Lot:hover{
+        color: blue;
+        background-color: white;
+      }
+
+
+      /* .day_theme{ 
+        background-color: aliceblue;
+        color: rgb(40, 37, 37);
+    }
+    
+    .night_theme{
+        background-color: rgb(0, 0, 0);
+        color: aliceblue;
+    }
+    */
+/* ====================================================== */
+.mini_icon{
+    display: flex;
+    gap: 10px;
+  position: fixed;
+  top: 10px;
+  left: 10px;
+     height: 45px;
+    width: 45px;
+}
+
+.galleryhref,.abouthref,.formweb{
+    text-decoration: none;
+    display: inline-block;
+    padding: 10px 20px;
+
+    background-color: rgb(255, 153, 0);
+    color: white;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease ;
+    
+}
+a{
+    text-decoration: none;
+}
+a:hover{
+    color: rgb(255, 234, 0);
+}
+.galleryhref{
+align-items: center;
+text-align: center;
+padding: 15px;
+margin: 10px;
+
+}
+.formweb{
+    align-items: center;
+    text-align: center;
+    padding: 15px;
+    margin: 10px;
+}
+.abouthref{
+    align-items: center;
+    text-align: center;
+    
+}
+   
+.bothbuttons{
+    display: flex;
+    position: fixed;
+    gap: 10px;
+    top: 25px;
+    right: 70px;
+
+}
+.user-icon{
+    display: flex;
+    position: fixed;
+    top: 10px;
+    right: 3px;
+    font-size: 40px;
+    
+}
+/* ----------------------------------------------------------- */
+
+.instagram-button  {
+    display: flex;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    align-items: center;
+text-align: center;
+
+}
+
+.instagram-logo {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    transition: transform 0.3s ease;
+}
+
+.instagram-logo:hover {
+    transform: scale(1.1);  /* מגדיל את התמונה כאשר העכבר נמצא מעל */
+}
+
+.twitterb-button{
+    display: flex;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    align-items: center;
+text-align: center;
+
+
+}
+.twitterb-logo{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    transition: transform 0.3s ease;
+}
+.twitterb-logo:hover{
+    transform: scale(1.1);
+}
+/* ----------------------------------------------------------------------------------------- */
+.ftext{
+   display: flex;
+justify-content: center;
+}
+
+ul{
+    list-style: none;
+    
+}
+
+@media (max-width:480px){
+    body{
+        display: flex;
+        flex-direction: column;
+        
+        
+    }
+    body > *{
+        height: 300px;
+        display: flex;
+        align-items: center;
+       justify-content: center;
+       
+    }
+    #navbar{
+        display: flex;
+        flex-direction: column;
+        height: 60vh;
+        overflow: scroll;
+    }
+}
+
+.uria{
+    font-weight: bolder;
+}
